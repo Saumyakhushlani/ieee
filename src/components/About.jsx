@@ -141,7 +141,7 @@ const About = () => {
         >
           <div className="inline-flex items-center space-x-6 bg-white border border-gray-200 rounded-xl px-8 py-4 shadow-md">
             <div className="text-sm text-gray-600">
-              <strong className="text-gray-800">Website:</strong> cse.manit.ac.in
+              <strong className="text-gray-800">Website:</strong> https://ieeenitb.com/
             </div>
             <div className="w-px h-6 bg-gray-300"></div>
             <div className="text-sm text-gray-600">

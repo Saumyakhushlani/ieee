@@ -50,7 +50,6 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +72,6 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          {/* Social Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -101,16 +99,16 @@ const Footer = () => {
             <div className="mt-4">
               <p className="text-sm text-muted-foreground mb-2">Visit our website:</p>
               <a 
-                href="https://cse.manit.ac.in" 
+                href="https://ieeenitb.com/" 
                 className="text-primary hover:text-primary-glow transition-colors duration-200 text-sm"
               >
-                cse.manit.ac.in
+                https://ieeenitb.com/
               </a>
             </div>
           </motion.div>
         </div>
 
-        {/* Bottom Bar */}
+       
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
