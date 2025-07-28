@@ -17,7 +17,7 @@ const page = () => {
         try {
             const res = await axios.post("/api/check-pass", { password })
             if (res.status === 200 && res.data.success) {
-                router.push("/add-attendance")
+                router.push("/form-data")
             } else {
                 setError("Incorrect password.")
             }

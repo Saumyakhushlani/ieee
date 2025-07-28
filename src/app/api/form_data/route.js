@@ -27,3 +27,19 @@ export async function POST(req){
         )
     }
 }
+
+export async function GET(){
+    try {
+        await dbConnect()
+        const formData = await Data.find()
+        return NextResponse.json(
+            {formData},
+            {status:200}
+        )
+    } catch (error) {
+        return NextResponse.json(
+            {error:error.message||"Error in fetching Data"},
+            {status:404}
+        )
+    }
+}
