@@ -1,20 +1,20 @@
 import { dbConnect } from "@/Db/dbConnect";
 import { NextResponse } from "next/server";
-import { Data } from "@/models/data.model";
+import { User } from "@/models/data.model";
 
 
 export async function POST(req){
     try {
         await dbConnect()
         const {name,scholar_number,department}= await req.json()
-        const dummy= Data.findOne({name,scholar_number,department})
+        const dummy= await User.findOne({name,scholar_number})
         if(dummy){
             return NextResponse.json(
                 {error:"You have Already Registered"},
                 {status:409}
             )
         }
-        const newData = new Data({name,scholar_number,department})
+        const newData = new User({name,scholar_number,department})
         const savedData = await newData.save()
         return NextResponse.json(
             {Message:"Data Saved Succesfully",savedData},
@@ -31,7 +31,7 @@ export async function POST(req){
 export async function GET(){
     try {
         await dbConnect()
-        const formData = await Data.find()
+        const formData = await User.find()
         return NextResponse.json(
             {formData},
             {status:200}

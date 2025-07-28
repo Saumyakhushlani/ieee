@@ -52,7 +52,7 @@ const page = () => {
                 >
                     Login
                 </button>
-                <div className="mt-2">Admin Password: <strong>Admin1234</strong></div>
+                <div className="mt-2">Admin Password: <strong>Admin1</strong></div>
             </form>
         </div>
     )
